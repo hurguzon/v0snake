@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect, useCallback } from 'react'
 import { io, Socket } from 'socket.io-client'
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
+import { Button } from "../components/ui/button"
+import { Card } from "../components/ui/card"
+import { Input } from "../components/ui/input"
 
 type Direction = 'UP' | 'DOWN' | 'LEFT' | 'RIGHT'
 type Position = [number, number]
