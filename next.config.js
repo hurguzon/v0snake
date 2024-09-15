@@ -6,8 +6,16 @@ module.exports = {
         fs: false,
         net: false,
         tls: false,
-      };
+      }
     }
-    return config;
+    return config
   },
-};
+  async rewrites() {
+    return [
+      {
+        source: '/socket.io/:path*',
+        destination: '/api/socket',
+      },
+    ]
+  },
+}

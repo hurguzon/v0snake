@@ -34,9 +34,10 @@ export default function OnlineSnakeGame() {
 
   useEffect(() => {
     const initSocket = async () => {
-      // await fetch('/api/socket')
-      // const newSocket = io()
-      const newSocket = io('/api/socket')
+      await fetch('/api/socket')
+      const newSocket = io({
+        path: '/api/socket',
+      })
       setSocket(newSocket)
     }
 
